@@ -1,0 +1,61 @@
+<html>
+
+  <head>
+    <title>Look Up</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Inlined only to remove a request. Inlining CSS is bad practice! -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <!-- If I decide that good practice is worth an extra network request.-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+
+  <body class="animated fadeIn">
+    <header class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <a href="https://apod.nasa.gov/apod/astropix.html">
+            <img class="img-circle page-load-fadein" id="logo" src="{{ url_for('static', filename='img/apod.png') }}" class="img-circle">
+          </a>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col">
+          <a class="page-load-fadein" id="author" href="https://github.com/seanpianka/" target="_blank">by Sean Pianka</a>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col">
+          <a class="page-load-fadein" id="credits" href="https://apod.nasa.gov/apod/lib/aptree.html">Credit: NASA's APOD</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="content" class="container page-load-fadein px-5">
+    </main>
+
+    <div id="loading">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+    <script>$(document).ready(function(){var win=$(window);var url='/fetch/5b242458c632ddb37d2e00b2f30dca144b8de39d08d3b20fdadbfcff0fc8a25f';var ready=!0;let LOADING_BAR=$('#loading');let CONTENT_AREA=$('#content');$.ajax({url:url,dataType:'html',success:function(html)
+{CONTENT_AREA.append(html);LOADING_BAR.hide()}});$(window).bind('scroll',function()
+{if(ready&&$(document).height()-$(window).scrollTop()<=3000)
+{$('#loading').show();$.ajax({url:url,dataType:'html',success:function(html)
+{CONTENT_AREA.append(html);LOADING_BAR.hide()}});ready=!1;setTimeout(function(){ready=!0},500)}})})</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123055019-2"></script>
+    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-123055019-2');</script>
+  </body>
+
+</html>

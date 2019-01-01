@@ -1,0 +1,217 @@
+body {
+    font-family: "Helvetica", "Arial", sans-serif;
+    color: #555;
+    background: #202020;
+}
+
+/*============================== Page Header ================================*/
+.container-fluid {
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+header {
+    background-color: #263d36;
+    background-image: url("/static/img/header.jpg");
+    background-position: center center fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: none;
+    line-height: 1.2;
+    padding: 9vw;
+    text-align: center;
+    border-bottom: 3px solid #121212;
+}
+
+header img {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+header a#author {
+    border: 1px solid #e81c4f;
+    border-radius: 290486px;
+    color: white;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+}
+
+header a#author:hover {
+    background:  #e81c4f;
+    color: white;
+}
+
+header a#credits {
+    color: white;
+    font-size: 0.5em;
+    letter-spacing: 0.2em;
+    padding: 3em 3em;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: none 200ms ease-out;
+    transition-property: color, background;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+#logo {
+    display: inline-block;
+    height: 192px;
+    width: 192px;
+    vertical-align: top;
+    box-shadow: 1px 1px 10px #121212;
+}
+
+/* ============================== Page Content ==============================*/
+h2 {
+    margin-top: 1em;
+    padding-top: 1em;
+}
+
+a {
+    color: #e81c4f;
+    text-decoration: none;
+}
+
+main {
+    border-radius: 2px;
+    padding-top: 1.25em;
+    margin: 0 auto;
+    width: 100vw;
+    position: relative;
+    outline: thin solid #181818;
+}
+
+.post {
+    background: #252525;
+    background: #f7f7f7;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    box-shadow: 1px 1px 5px #121212;
+}
+
+.post:first-child {
+    margin-top: 0;
+}
+
+.post-info {
+    margin-bottom: 0.8em;
+    margin-top: 0.8em;
+}
+
+.post-archive {
+    margin-left: 0.15em;
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 2em;
+    line-height: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.post-image {
+    border-radius: 5px;
+    cursor: zoom-in;
+    box-shadow: 1px 1px 5px #121212;
+}
+
+/*============================= Spinner Animation ===========================*/
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+/* ========================== Page Load Fade-In ============================= */
+/* Forces 3 second fade-in on page-load. */
+.page-load-fadein {
+    animation: 			fadein 2s;
+    -moz-animation: 	fadein 2s; /* Firefox */
+    -webkit-animation: 	fadein 2s; /* Safari and Chrome */
+    -o-animation: 		fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from { opacity:0; }
+    to { opacity:1; }
+}
+@-o-keyframes fadein { /* Opera */
+    from { opacity:0; }
+    to { opacity: 1; }
+}
