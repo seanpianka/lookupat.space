@@ -1,12 +1,7 @@
 # Look Up at Space
 Infinity scroll website that lets you view the universe in all its glory. [View the website here.](http://lookupat.space/)
 
-
-<div>
-    <img src="https://i.imgur.com/GWFOgGa.jpg" width="441px" height="784px" alt="A screenshot showing PySee">
-    <img src="https://i.imgur.com/HLsrEqP.jpg" width="441px" height="784px" alt="A screenshot showing PySee">
-</div>
-
+<img src="https://i.imgur.com/zVAYVxQ.jpg">
 
 The scraping script relies on regular expressions and requests to the heavy
 lifting. After obtaining the HTML from the 
